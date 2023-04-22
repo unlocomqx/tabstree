@@ -11,7 +11,7 @@ import javax.swing.JPanel
 
 class TabsTreeToolWindow : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val toolWindowContent: CalendarToolWindowContent = CalendarToolWindowContent(toolWindow)
+        val toolWindowContent = CalendarToolWindowContent(toolWindow)
         val content = ContentFactory.getInstance().createContent(toolWindowContent.getContentPanel(), "", false)
         toolWindow.contentManager.addContent(content)
     }
